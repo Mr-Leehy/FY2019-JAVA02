@@ -1,6 +1,11 @@
+package com.StudentSystem;
+
+
 import java.util.Scanner;
 
-public class SystemA{
+public class StudentSystem{
+	
+	
 	
 	public static void main(String[] args){
 		Administrators[] A=new Administrators[5];
@@ -25,6 +30,7 @@ public class SystemA{
 		action1(S);
 		find1();
 		student2(S);
+		panDuan(S);
 		inCrease(S);
 		delete(S);
 		modify(S);
@@ -56,7 +62,7 @@ public class SystemA{
 
 	public static void contain(Administrators[] A){
 		
-			Administrators a=new Administrators("张三丰","admin");
+			Administrators a=new Administrators("admin","admin");
 			Administrators aa=new Administrators("张无忌","admin");
 			Administrators aaa=new Administrators("赵敏","admin");
 			Administrators aaaa=new Administrators("杨潇","admin");
@@ -143,6 +149,11 @@ public class SystemA{
 			studentS();
 			action1(S);
 	}
+	public static void panDuan(student[] S) {
+		
+		
+		
+	}
 	public static void inCrease(student[] S) {
 		System.out.println("-------------------------添加学生信息------------------------------");
 		
@@ -208,6 +219,7 @@ public class SystemA{
 	public static void delete(student[] S){
 		Scanner scanner=new Scanner(System.in);  
 		System.out.println("请输入学生ID：");	
+		
 		int id1=scanner.nextInt();	
 		for(int i=0;i<S.length;i++){
 			if(S[i].id==id1){
